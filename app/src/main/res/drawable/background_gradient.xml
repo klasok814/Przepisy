@@ -1,0 +1,15 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <!-- pozwala nam tworzyc wlasne tla do naszych plikacji -->
+
+    <!-- gradient pozwala nam wybrac odpowiednie kolory z ktorych ma sie skladac tlo -->
+    <gradient
+        android:startColor="#00B7EB"
+        android:endColor="#082567"
+        android:angle="45"
+        android:centerColor="#9F9FDF"
+        android:type="linear"/> <!-- angel - stopnie pod jakimi maja byc nachylone kolory -->
+
+    <!-- corners ustawiaja zaokraglenie rogow
+    <corners android:radius="40dp"/> -->
+</shape>
