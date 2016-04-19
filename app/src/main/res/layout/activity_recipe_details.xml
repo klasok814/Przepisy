@@ -9,25 +9,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/background_gradient"
-    tools:context=".ui.RecipesActivity">
+    tools:context="com.androidaplication.bubu.przepisy.ui.RecipeDetailsActivity">
 
-    <TextView
+
+    <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recipeLabel"
-        android:text="Przepisy"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/white"/>
+        android:id="@+id/tabLayout"/>
 
-    <ListView
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recipeListView"
-        android:layout_below="@id/recipeLabel"
-        android:layout_margin="@dimen/margin_size_5dp"
-        android:divider="@null"
-        android:dividerHeight="@dimen/dividerHeight_size"/>
+        android:layout_below="@id/tabLayout"
+        android:id = "@+id/viewPager"/>
 
 </RelativeLayout>

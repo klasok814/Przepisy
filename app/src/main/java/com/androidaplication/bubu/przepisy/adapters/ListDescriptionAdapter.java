@@ -1,35 +1,37 @@
-package com.androidaplication.bubu.przepisy;
+package com.androidaplication.bubu.przepisy.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.List;
+import com.androidaplication.bubu.przepisy.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ListRecipesAdapter extends BaseAdapter {
+/**
+ * Created by Klaudia on 2016-04-19.
+ */
+public class ListDescriptionAdapter extends BaseAdapter {
     private Context mContext;
-    private List<Recipe> mRecipeList;
+    private String[] mDescriptionTab;
 
-    public ListRecipesAdapter(Context context, List<Recipe> recipeList){
+    public ListDescriptionAdapter(Context context, String[] descriptionTab){
         mContext = context;
-        mRecipeList = recipeList;
+        mDescriptionTab = descriptionTab;
     }
 
     @Override
     public int getCount() {
-        return mRecipeList.size();
+        return mDescriptionTab.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return mRecipeList.get(position);
+        return mDescriptionTab[position];
     }
 
     @Override
@@ -42,24 +44,24 @@ public class ListRecipesAdapter extends BaseAdapter {
         ViewHolder holder;
 
         if(convertView == null){
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.recipes_list_layout, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.description_list_layout, parent, false);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else holder = (ViewHolder) convertView.getTag();
 
-        Recipe recipe = mRecipeList.get(position);
-        holder.mRecipeIconView.setImageResource(recipe.getIcon());
-        holder.mRecipeTextView.setText(recipe.getName());
+        String ingredient = mDescriptionTab[position];
+        holder.mSimpleDescriptionTex.setText(ingredient);
 
         return convertView;
     }
 
     public class ViewHolder{
-        @Bind(R.id.recipeImage) ImageView mRecipeIconView;
-        @Bind(R.id.recipeText) TextView mRecipeTextView;
+        @Bind(R.id.simpleDescriptionText)
+        TextView mSimpleDescriptionTex;
 
         public ViewHolder(View view){
             ButterKnife.bind(this, view);
         }
     }
 }
+

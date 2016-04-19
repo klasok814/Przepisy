@@ -1,10 +1,12 @@
-package com.androidaplication.bubu.przepisy;
+package com.androidaplication.bubu.przepisy.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.androidaplication.bubu.przepisy.recipes.Recipe;
 
 public class DBMenager extends SQLiteOpenHelper {
     private static final String BASE_NAME = "Recipes.db";

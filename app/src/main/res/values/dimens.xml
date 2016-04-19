@@ -7,4 +7,9 @@
     <dimen name="dividerHeight_size">0dp</dimen>
     <dimen name="icon_list_size">50dp</dimen>
     <dimen name="recipe_list_textSize">22dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="size_25dp">25dp</dimen>
+    <dimen name="size_10dp">10dp</dimen>
+    <dimen name="size_30dp">30dp</dimen>
+    <dimen name="size_17dp">17dp</dimen>
 </resources>

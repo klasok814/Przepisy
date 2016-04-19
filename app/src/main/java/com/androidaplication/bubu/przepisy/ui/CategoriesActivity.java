@@ -1,9 +1,14 @@
-package com.androidaplication.bubu.przepisy;
+package com.androidaplication.bubu.przepisy.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import com.androidaplication.bubu.przepisy.recipes.Categories;
+import com.androidaplication.bubu.przepisy.recipes.KeyClas;
+import com.androidaplication.bubu.przepisy.R;
+import com.androidaplication.bubu.przepisy.adapters.ListCategotyAdapters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;
 
-public class MainActivity extends AppCompatActivity {
+public class CategoriesActivity extends AppCompatActivity {
     @Bind(R.id.categoryListView) ListView mCategoryListView;
 
     private List<Categories> mCategoriesList = new ArrayList<>();

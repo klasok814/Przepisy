@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20dp"
+        android:weightSum="2">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Czas: "
+        android:textSize="@dimen/margin_20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_weight="0.1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeTetView"
+            android:text="10 minut"
+            android:textSize="@dimen/margin_20dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.2"
+            android:layout_marginRight="@dimen/size_10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Porcje: "
+            android:textSize="@dimen/margin_20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_weight="0.3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/servesTetView"
+            android:text="10"
+            android:textSize="@dimen/margin_20dp"
+            android:textColor="@color/white"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ingredientsListView"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_margin="@dimen/margin_20dp"/>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.androidaplication.bubu.przepisy;
+package com.androidaplication.bubu.przepisy.recipes;
 
 import android.os.Parcel;
 import android.os.Parcelable;

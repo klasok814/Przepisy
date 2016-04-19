@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Przepisy</string>
+    <string name="ingridients">Składniki</string>
+    <string name="descriptions">Instrukcje</string>
+    <string name="exapleText">Kroję cukinią, wędlinę, paprykę i ser. Wrzucam całość na patelnię i podsmażam (bez dodatkowego tłuszczu) aż się zetnie, ostrożnie odwracam na drugą stronę i chwilę podgrzewam.</string>
 </resources>
