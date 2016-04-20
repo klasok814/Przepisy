@@ -45,7 +45,8 @@ public class RecipeIngredientsFragment extends Fragment {
     }
 
     private void initUiComponents() {
-        mTimeText.setText(mRecipe.getTime() + "");
+        getActivity().setTitle(mRecipe.getName());
+        mTimeText.setText(mRecipe.getTime() + " minut");
         mServeText.setText(mRecipe.getServes() + "");
         mListIngridientAdapter = new ListIngridientAdapter(getActivity(), mRecipe.getIngeedients());
         mIngridientsListView.setAdapter(mListIngridientAdapter);

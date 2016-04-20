@@ -30,7 +30,11 @@ public class CategoriesActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         addCategories(R.drawable.sniadania, "Sniadania");
-        //addCategories(R.drawable.cloudy, "Przekaski");
+        addCategories(R.drawable.przekaski, "Przekaski");
+        addCategories(R.drawable.salatka, "Sałatki");
+        addCategories(R.drawable.zupa, "Zupy");
+        addCategories(R.drawable.ciasto, "Ciasta");
+        addCategories(R.drawable.drink, "Koktajle");
 
         mListCategotyAdapters = new ListCategotyAdapters(this, mCategoriesList);
         mCategoryListView.setAdapter(mListCategotyAdapters);
@@ -48,6 +52,7 @@ public class CategoriesActivity extends AppCompatActivity {
         Categories category = (Categories) mListCategotyAdapters.getItem(position);
         Intent intent = new Intent(this, RecipesActivity.class);
         intent.putExtra(KeyClas.CATEGORY, category);
+        intent.putExtra(KeyClas.POSITION, position);
         startActivity(intent);
     }
 }

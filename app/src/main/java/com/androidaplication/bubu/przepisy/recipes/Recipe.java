@@ -73,7 +73,7 @@ public class Recipe implements Parcelable{
         dest.writeInt(mTime);
         dest.writeInt(mServes);
         dest.writeStringArray(mIngeedients);
-        dest.writeStringArray(mIngeedients);
+        dest.writeStringArray(mDescriptions);
     }
 
     private Recipe(Parcel in){

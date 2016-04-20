@@ -9,20 +9,17 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.androidaplication.bubu.przepisy.R;
-import com.androidaplication.bubu.przepisy.adapters.ListDescriptionAdapter;
+import com.androidaplication.bubu.przepisy.adapters.ListIngridientAdapter;
 import com.androidaplication.bubu.przepisy.recipes.KeyClas;
 import com.androidaplication.bubu.przepisy.recipes.Recipe;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * Created by Klaudia on 2016-04-19.
- */
 public class RecipeDescriptionsFragent extends Fragment {
     @Bind(R.id.descriptionListView)  ListView mDescriptionListView;
 
-    private ListDescriptionAdapter mListDescriptionAdapter;
+    private ListIngridientAdapter mListDescriptionAdapter;
     private Recipe mRecipe;
 
     @Override
@@ -45,10 +42,11 @@ public class RecipeDescriptionsFragent extends Fragment {
     }
 
     private void initUiComponents() {
-
-        mListDescriptionAdapter = new ListDescriptionAdapter(getActivity(), mRecipe.getDescriptions());
+        getActivity().setTitle(mRecipe.getName());
+        mListDescriptionAdapter = new ListIngridientAdapter(getActivity(), mRecipe.getDescriptions());
         mDescriptionListView.setAdapter(mListDescriptionAdapter);
     }
+
     public static RecipeDescriptionsFragent getInstance(Recipe recipe){
         RecipeDescriptionsFragent fragment = new RecipeDescriptionsFragent();
         Bundle bundle = new Bundle();
